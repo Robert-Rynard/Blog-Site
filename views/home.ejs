@@ -1,0 +1,8 @@
+<%- include("partials/header") %>
+
+<h1>Home</h1>
+<p><%= homeContent %></p>
+<% posts.forEach(post => { %>
+<h1><a href="/posts/<%= _.lowerCase(post.title)  %>"> <%= post.title %></a></h1>
+<p><%= post.body.substring(0,300) %>...</p>
+<% }); %> <%- include("partials/footer") %>
